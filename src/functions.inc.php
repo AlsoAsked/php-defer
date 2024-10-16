@@ -1,5 +1,7 @@
 <?php
 
+namespace PhpDefer;
+
 /*
  * This file is part of the php-defer/php-defer package.
  *
@@ -9,9 +11,9 @@
  * file that was distributed with this source code.
  */
 
-function defer(?SplStack &$context, callable $callback): void
+function defer(?\SplStack &$context, callable $callback): void
 {
-    $context ??= new class() extends SplStack {
+    $context ??= new class() extends \SplStack {
         public function __destruct()
         {
             while ($this->count() > 0) {

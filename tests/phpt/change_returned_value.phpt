@@ -11,7 +11,7 @@ require \implode(\DIRECTORY_SEPARATOR, [__DIR__, '..', '..', 'vendor', 'autoload
 function &foo()
 {
     // variable $result must be passed to anonymous function by reference
-    defer($_, function () use (&$result) {
+    \PhpDefer\defer($_, function () use (&$result) {
         $result = 'Change World';
     });
 

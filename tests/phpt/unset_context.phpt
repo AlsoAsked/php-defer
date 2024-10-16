@@ -5,17 +5,17 @@ require \implode(\DIRECTORY_SEPARATOR, [__DIR__, '..', '..', 'vendor', 'autoload
 
 function helloGoodbye()
 {
-    defer($_, function () {
+    \PhpDefer\defer($_, function () {
         echo "hello\n";
     });
     // context is destroyed here, it triggers callback immediately
     unset($_);
 
-    defer($_, function () {
+    \PhpDefer\defer($_, function () {
         echo "goodbye\n";
     });
 
-    defer($_, function () {
+    \PhpDefer\defer($_, function () {
         echo "...\n";
     });
 }

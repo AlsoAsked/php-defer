@@ -16,7 +16,7 @@ use PHPUnit\Framework\TestCase;
 /**
  * @internal
  *
- * @covers \defer
+ * @covers \PhpDefer\defer
  */
 final class DeferTest extends TestCase
 {

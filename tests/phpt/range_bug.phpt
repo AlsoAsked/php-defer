@@ -8,7 +8,7 @@ function defer_range(&$arr, $min, $max)
     $arr = [];
     for ($i = $max; $i >= $min; --$i) {
         // $i is a reference, value of given reference is changed after each iteration
-        defer($_, function () use (&$arr, &$i) {
+        \PhpDefer\defer($_, function () use (&$arr, &$i) {
             $arr[] = $i;
         });
     }

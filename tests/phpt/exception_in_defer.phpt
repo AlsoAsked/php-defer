@@ -5,7 +5,7 @@ require \implode(\DIRECTORY_SEPARATOR, [__DIR__, '..', '..', 'vendor', 'autoload
 
 function throwException()
 {
-    defer($_, function () {
+    \PhpDefer\defer($_, function () {
         throw new \Exception('Deferred exception');
     });
 

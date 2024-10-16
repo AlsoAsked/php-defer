@@ -5,11 +5,11 @@ require \implode(\DIRECTORY_SEPARATOR, [__DIR__, '..', '..', 'vendor', 'autoload
 
 function helloGoodbye()
 {
-    defer($_, function () {
+    \PhpDefer\defer($_, function () {
         echo "goodbye\n";
     });
 
-    defer($_, function () {
+    \PhpDefer\defer($_, function () {
         echo "...\n";
     });
 
